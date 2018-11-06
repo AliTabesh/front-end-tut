@@ -31,6 +31,8 @@
             </div>
         </div>
     </nav>
+  </br>
+
     <header class="jumbotron bg-warning">
       <div class="container">
         <div class="row row-header">
@@ -38,12 +40,18 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center d-flex justify-content-center">
                   <img src="img/logo.png" class="img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-3 align-self-center d-flex justify-content-center">
+                  <input class="btn btn-success btn-lg"  type="button" onClick="document.getElementById('CARD').scrollIntoView();" value="Reserve Table" />
+                  <!-- <button type="button" class="btn btn-success" name="button"> <a href="#CARD">Reserve Table</a> </button> -->
                 </div>
             </div>
         </div>
     </header>
+  </br>
 
     <div class="container">
       <div class="row row-content align-items-center">
@@ -61,37 +69,110 @@
                 </div>
         </div>
 
+      </br>
 
-        <div>
-            <div>
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div>
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col col-sm order-sm-last col-md">
+              <div class="media">
+                <div class="media-body">
+                  <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span> </h2>
+                  <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                </div>
+                <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
+              </div>
             </div>
         </div>
-
-
-          <div class="row row-content align-items-center">
+      </br>
+        <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                    <h3>Meet our Culinary Specialists</h3>
-                </div>
-                <div class="col col-sm order-sm-first col-md">
-                    <div class="media">
-                      <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
-                      <div class="media-body">
+                <h3>Meet our Culinary Specialists</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
+                    <div class="media-body">
                       <h2 class="mt-0">Alberto Somayya</h2>
                       <h4>Executive Chef</h4>
                       <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          </br>
+
+            <div class="row row-content" id="CARD">
+              <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="card">
+                  <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                  <div class="card-body">
+                    <form>
+                      <div class="form-group row">
+                        <label for="numOfGuests" class="col-12 col-md-3 col-form-label">Number of Guests</label>
+                        <div class="col-md-9">
+
+                          <div class="form-check-inline">
+                            <label for="radioBtn">
+                              <input type="radio" class="form-check-input" name="radioBtn"> 1
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <label for="radioBtn">
+                              <input type="radio" class="form-check-input" name="radioBtn"> 2
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <label for="radioBtn">
+                              <input type="radio" class="form-check-input" name="radioBtn"> 3
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <label for="radioBtn">
+                              <input type="radio" class="form-check-input" name="radioBtn"> 4
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <label for="radioBtn">
+                              <input type="radio" class="form-check-input" name="radioBtn"> 5
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <label for="radioBtn">
+                              <input type="radio" class="form-check-input" name="radioBtn"> 6
+                            </label>
+                          </div>
+
+                        </div>
                       </div>
-                    </div>
-                    </div>
+
+                      <div class="form-group row">
+                        <label for="dateTime" class="form-label col-12 col-md-3">Date and Time</label>
+                        <div class="col-md-9">
+                          <div class="form-check-inline col-sm-4">
+                            <input type="date" class="form-control" name="Date">
+                          </div>
+                          <div class="form-check-inline col-sm-4">
+                            <input type="time" class="form-control" name="Time">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="offset-md-3 col-md-9">
+                          <button type="submit" class="btn btn-primary" name="button">Reserve</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
             </div>
 
-
     </div>
-
+    </br>
     <footer class="footer jumbotron bg-warning">
         <div class="container">
             <div class="row">
@@ -128,7 +209,7 @@
            </div>
            <div class="row justify-content-center">
                 <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    <p>© Copyright 2018 Ristorante Con Fusion (not really serious :)) )</p>
                 </div>
            </div>
         </div>
