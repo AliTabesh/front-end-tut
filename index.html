@@ -28,11 +28,44 @@
                         <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text"><a href="#" data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in-alt"></span> Login</a> </span>
             </div>
         </div>
     </nav>
   </br>
 
+  <div class="modal fade" role="dialog" id="loginModal">
+    <div class="modal-dialog modal-lg" role="content">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group form-row">
+              <label class="sr-only" for="email">Email:</label>
+              <input id="email" class="form-control" type="email" name="email" placeholder="Enter E-mail">
+            </div>
+            <div class="form-group form-row">
+              <label class="sr-only" for="pass">Password:</label>
+              <input id="pass" class="form-control" type="password" name="pass" placeholder="Password">
+            </div>
+            <div class="form-check form-row">
+              <div class="offset-4">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label"> Remember me</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <button class="offset-4 btn btn-primary btn-auto " type="submit" name="submit">Sign in</button>
+              <button class="offset-0 btn btn-secondary btn-auto" type="button" name="cancel" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
     <header class="jumbotron bg-warning">
       <div class="container">
         <div class="row row-header">
@@ -45,8 +78,13 @@
                 </div>
 
                 <div class="col-12 col-sm-3 align-self-center d-flex justify-content-center">
-                  <input class="btn btn-success btn-lg"  type="button" onClick="document.getElementById('CARD').scrollIntoView();" value="Reserve Table" />
-                  <!-- <button type="button" class="btn btn-success" name="button"> <a href="#CARD">Reserve Table</a> </button> -->
+                  <!-- <input class="btn btn-success btn-lg"  type="button" onClick="document.getElementById('CARD').scrollIntoView();" value="Reserve Table" /> -->
+                  <div class="col-12 col-sm align-self-center">
+                    <a role="button" class="btn btn-block nav-link btn-success"
+                     data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+00 0000000</strong>"
+                     data-placement="bottom"
+                     href="#CARD">Reserve Table</a>
+                  </div>
                 </div>
             </div>
         </div>
@@ -218,7 +256,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
 </body>
 
 </html>
