@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="bootstrap-social.css">
     <link rel="stylesheet" href="/css/style.css">
     <style media="screen">
+
       .carousel{
         background: #512DA8;
       }
@@ -26,6 +27,11 @@
         top: 0;
         left: 0;
         min-height: 300px;
+      }
+      #carouselButton{
+        right: 0px;
+        position: absolute;
+        bottom: 0px;
       }
     </style>
 </head>
@@ -255,6 +261,11 @@
             <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
+
+              <button id="carouselButton" class="btn btn-danger btn-sm" type="button" >
+                <span class="fa fa-pause"></span>
+              </button>
+
           </div>
         </div>
       </div>
@@ -429,6 +440,23 @@
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script> -->
+<script>
+  $(document).ready(function(){
+    $('#mycarousel').carousel({ interval: 2000 });
+    $("#carouselButton").click(function(){
+      if ($('#carouselButton').children('span').hasClass('fa-pause')) {
+        $('#mycarousel').carousel("pause");
+        $('#carouselButton').children('span').removeClass('fa-pause');
+        $('#carouselButton').children('span').addClass('fa-play');
+      }
+      else if ($('#carouselButton').children('span').hasClass('fa-play')) {
+        $('#mycarousel').carousel("cycle");
+        $('#carouselButton').children('span').removeClass('fa-play');
+        $('#carouselButton').children('span').addClass('fa-pause');
+      }
+     });
+  });
+</script>
 </body>
 
 </html>
