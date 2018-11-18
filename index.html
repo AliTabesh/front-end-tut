@@ -97,17 +97,121 @@
                 <div class="col-12 col-sm-3 align-self-center d-flex justify-content-center">
                   <!-- <input class="btn btn-success btn-lg"  type="button" onClick="document.getElementById('CARD').scrollIntoView();" value="Reserve Table" /> -->
                   <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-success"
-                     data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+00 0000000</strong>"
-                     data-placement="bottom"
-                     href="#CARD">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-success" data-placement="bottom" data-toggle="modal" data-target="#formModal">Reserve Table</a>
+
+                     <!-- <a role="button" class="btn btn-block nav-link btn-success"
+                      data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+00 0000000</strong>"
+                      data-placement="bottom"
+                      href="#CARD">Reserve Table</a>
+                       -->
                   </div>
                 </div>
             </div>
         </div>
     </header>
   </br>
+<!-- *************************form modal************************** -->
+<div class="modal fade" role="dialog" id="formModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Reserve a Table</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group row">
+            <label for="numOfGuests" class="col-12 col-md-3 col-form-label">Number of Guests</label>
+            <div class="col-md-9">
 
+              <div class="form-check-inline">
+                <label for="radioBtn">
+                  <input type="radio" class="form-check-input" name="radioBtn"> 1
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label for="radioBtn">
+                  <input type="radio" class="form-check-input" name="radioBtn"> 2
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label for="radioBtn">
+                  <input type="radio" class="form-check-input" name="radioBtn" checked> 3
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label for="radioBtn">
+                  <input type="radio" class="form-check-input" name="radioBtn"> 4
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label for="radioBtn">
+                  <input type="radio" class="form-check-input" name="radioBtn"> 5
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label for="radioBtn">
+                  <input type="radio" class="form-check-input" name="radioBtn"> 6
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <div class="form-group row">
+            <label for="section" class="form-label col-12 col-md-3">Section</label>
+            <div class="btn-group col-md-9 btn-group-toggle" data-toggle="buttons" role="group">
+                <!-- <button type="radio" class="btn btn-success btn-default active" checked="checked">Non-Smoking</button>
+                <button type="radio" class="btn  btn-danger">Smoking</button> -->
+
+                <label class="btn btn-success active">
+                  <input type="radio" name="options" id="option1" autocomplete="on" checked> Non-Smoking
+                </label>
+                <label class="btn btn-danger">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                </label>
+
+            <!-- <div id="section" class="btn-group col-md-9" role="group" data-toggle="buttons">
+              <button class="btn btn-success btn-default active" type="button" name="non-smoking" checked="checked">Non-Smoking</button>
+              <button class="btn btn-danger" type="button" name="smoking">Smoking</button> -->
+
+          <!-- <a role="button" class="btn btn-primary"><i class="fa fa-phone"></i> Call</a>
+          <a role="button" class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
+          <a role="button" class="btn btn-success"><i class="fa fa-envelope-o"></i> Email</a> -->
+        </div>
+      </div>
+
+
+          <div class="form-group row">
+            <label for="dateTime" class="form-label col-12 col-md-3">Date and Time</label>
+            <div class="col-md-9">
+              <div class="form-check-inline col-sm-4">
+                <input type="date" class="form-control" name="Date">
+              </div>
+              <div class="form-check-inline col-sm-4">
+                <input type="time" class="form-control" name="Time">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="offset-md-3 col-md-9">
+              <button type="submit" class="btn btn-primary" name="button">Reserve</button>
+              <button type="submit" class="btn btn-sm btn-secondary" name="button">Cancel</button>
+
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ************************/form modal******************************* -->
     <div class="container">
 
       <div class="row row-content">
@@ -205,7 +309,7 @@
         </div>
           </br>
 
-            <div class="row row-content" id="CARD">
+            <!-- <div class="row row-content" id="CARD">
               <div class="col-12 col-sm-8 offset-sm-2">
                 <div class="card">
                   <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
@@ -271,7 +375,7 @@
 
                 </div>
               </div>
-            </div>
+            </div> -->
 
     </div>
     </br>
@@ -320,11 +424,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script>
+    <!-- <script>
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
       });
-    </script>
+    </script> -->
 </body>
 
 </html>
